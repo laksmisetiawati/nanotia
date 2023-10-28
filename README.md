@@ -1,24 +1,22 @@
 # NanoTIA
 
-You only need to show two pages:
-● Front Page
-    ○ Shows a list of posts with title and a snippet of the post content.
-    ○ Example: https://www.techinasia.com/
-    ○ API Endpoint: https://www.techinasia.com/wp-json/techinasia/2.0/posts
-● Single Post Page
+You only need to show two pages: \
+● Front Page \
+    ○ Shows a list of posts with title and a snippet of the post content. \
+    ○ Example: https://www.techinasia.com/ \
+    ○ API Endpoint: https://www.techinasia.com/wp-json/techinasia/2.0/posts \
+● Single Post Page \
     ○ Upon clicking on the post title on the front page, it will bring you to the single post
-    page.
-    ○ The Single Post Page should be paywalled on the frontend.
-    ○ The visitor is allowed to view only 5 articles within the month.
+    page. \
+    ○ The Single Post Page should be paywalled on the frontend. \
+    ○ The visitor is allowed to view only 5 articles within the month. \
     ○ If the user hits the limit, a portion of the content should be blank out in the Single
-    Post Page.
-    ○ Example:
-    https://www.techinasia.com/google-temasek-digital-economy-report-2018
-    ○ API Endpoint:
-    https://www.techinasia.com/wp-json/techinasia/2.0/posts/google-temasek-digitaleconomy-report-2018
-    You don’t need to design any layout or elements, you can use the default Bootstrap theme.
-    Please at least provide a readme doc on how to setup and run your application in a local
-    environment
+    Post Page. \
+    ○ Example: \
+    https://www.techinasia.com/google-temasek-digital-economy-report-2018 \
+    ○ API Endpoint: \
+    https://www.techinasia.com/wp-json/techinasia/2.0/posts/google-temasek-digitaleconomy-report-2018 \
+    You don’t need to design any layout or elements, you can use the default Bootstrap theme. 
 
 
 
