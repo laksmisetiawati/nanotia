@@ -1,11 +1,11 @@
 # NanoTIA
 
 You only need to show two pages: \
-● Front Page \
+* Front Page \
     ○ Shows a list of posts with title and a snippet of the post content. \
     ○ Example: https://www.techinasia.com/ \
     ○ API Endpoint: https://www.techinasia.com/wp-json/techinasia/2.0/posts \
-● Single Post Page \
+* Single Post Page \
     ○ Upon clicking on the post title on the front page, it will bring you to the single post
     page. \
     ○ The Single Post Page should be paywalled on the frontend. \
