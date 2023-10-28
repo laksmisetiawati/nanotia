@@ -10,7 +10,6 @@ import Footer from './components/footer';
 // PAGES
 import HomePage from './pages/home/home';
 import PostDetailPage from './pages/posts/postDetail';
-import Error404Page from './pages/errors/error404';
 
 const App = () => (
     <Router>
@@ -20,7 +19,6 @@ const App = () => (
             <Routes>
                 <Route exact path="/" element={<HomePage/>}/>
                 <Route exact path="/:slug" element={<PostDetailPage/>}/>
-                {/* <Route path="*" element={< Error404Page />}></Route> */}
             </Routes>
 
             <Footer />

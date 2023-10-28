@@ -1,7 +1,8 @@
-import React, { Component, useEffect, useState, useRef, useCallback } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Loader from "./../../components/Loader";
+import { connect } from 'react-redux'
 import PostCard from "./PostCard";
 
 const PostsPage = () => {    
@@ -13,7 +14,7 @@ const PostsPage = () => {
         axios.get("https://www.techinasia.com/wp-json/techinasia/2.0/posts?page=1")
             .then((res) => {
                 setItems(res.data.posts);
-                console.log(res.data.posts);
+                // console.log(res.data.posts);
             })
             .catch((err) => console.log(err));
     }, []);
@@ -24,11 +25,10 @@ const PostsPage = () => {
                 setItems((prevItems) => [...prevItems, ...res.data.posts]);
                 res.data.posts.length > 0 ? setHasMore(true) : setHasMore(false);
                 // setHasMore(true);
-                console.log(res.data.posts.length)
-                console.log(res.data.posts);
+                // console.log(res.data.posts.length)
+                // console.log(res.data.posts);
             })
             .catch((err) => console.log(err));
-        console.log(`https://www.techinasia.com/wp-json/techinasia/2.0/posts?page=${index}`);
 
         setIndex((prevIndex) => prevIndex + 1);
     };

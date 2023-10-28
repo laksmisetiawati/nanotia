@@ -8,10 +8,13 @@ const PostDetailPage = () => {
     const [detailPost, SetPost] = useState({});
     const [countView, setCount] = useState(0);
 
+    const sessionName = slug.replace(/[^a-zA-Z]/g, '')+"XPageView";
+    const apiUrl = `https://www.techinasia.com/wp-json/techinasia/2.0/posts/${slug}`;
+
     useEffect(() => {
         const fetch = async () => {
             try {
-                const { data } = await axios.get(`https://www.techinasia.com/wp-json/techinasia/2.0/posts/${slug}`);
+                const { data } = await axios.get(apiUrl);
                 SetPost(data);
             } catch (err) {
                 console.error(err);
@@ -20,16 +23,17 @@ const PostDetailPage = () => {
         fetch();
 
         // session for limit article
-        var pageView = sessionStorage.getItem("pageView");
+        var pageView = sessionStorage.getItem(sessionName);
         if (pageView == null) {
             pageView = 1;
         } else {
             pageView = Number(pageView) + 1;
         }
-        sessionStorage.setItem("pageView", pageView);
+        sessionStorage.setItem(sessionName, pageView);
         setCount(pageView);
     }, []);
 
+    console.log(countView);
     
     if(countView <= 5) {
 
